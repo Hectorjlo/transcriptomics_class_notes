@@ -1,22 +1,54 @@
-# Shadow the BIG files
+# Large sequencing and alignment data
 *.sam
 *.bam
+*.bai
 *.salmon
 *.gtf
-DE_analysis/data/SRRs
-DE_analysis/data/trimmed_fastqs
+DE_analysis/data/SRRs/
+DE_analysis/data/trimmed_fastqs/
 nextflow_examples/results/trimmed/
 
-# Shadow vscode files
-*.vscode/
+# Nextflow execution directories and logs
+.nextflow/
+.nextflow.log*
+work/
+nextflow_examples/src/work/
+nextflow_examples/src/.nextflow/
+nextflow_examples/src/.nextflow.log*
 
-# Shadow rust files
+# Rust build artifacts (keep compiled release binary)
 DE_analysis/src/stats/target/*
-# Not shadow the release
-DE_analysis/!src/stats/target/release
+!DE_analysis/src/stats/target/release/
 DE_analysis/src/stats/target/release/*
-DE_analysis/!src/stats/target/release/stats
+!DE_analysis/src/stats/target/release/stats
 
-# Shadow nextflow files
-*.nextflow
+# Operating system metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+__MACOSX/
+Icon?
 
+# Redundant archive files in source folders
+DGE_ex/c12/*.zip
+
+# IDE & Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# R temporary files & environments
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Quarto / LaTeX auxiliary build files
+.quarto/
+*_cache/
